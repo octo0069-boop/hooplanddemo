@@ -1,0 +1,9 @@
+{
+  "id": "community.example.content-pack",
+  "name": "Example Content Pack",
+  "version": "1.0.0",
+  "author": "HoopLand Mod Loader Team",
+  "description": "Illustrative content definitions for teams, players, leagues, courts, jerseys and UI.",
+  "gameVersion": "1.09.6",
+  "type": "content"
+}
