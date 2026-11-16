@@ -29,14 +29,10 @@ jobs:
         run: |
           dotnet restore HoopLand.ModLoader.sln
           dotnet build HoopLand.ModLoader.sln --configuration Release --no-restore
-      - name: Run simulated host
-        run: dotnet run --project tools/HoopLand.ModLoader.DryRun --configuration Release --no-build -- --mods samples --game-version 1.09.6
-      - name: Upload build outputs
+      - name: Upload framework assemblies
         uses: actions/upload-artifact@v4
         with:
           name: HoopLand-ModLoader-build
-          path: |
-            src/**/bin/Release/**
-            tools/HoopLand.ModLoader.DryRun/bin/Release/**
+          path: src/**/bin/Release/**
           if-no-files-found: error
           retention-days: 14
